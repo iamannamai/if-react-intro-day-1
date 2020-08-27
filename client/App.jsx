@@ -4,34 +4,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      counter: 0
+      counter: 0,
     };
-    this.incrementCounter = this.incrementCounter.bind(this);
-    this.decrementCounter = this.decrementCounter.bind(this);
   }
 
-  incrementCounter() {
-    this.setState(prevState => ({
-      counter: prevState.counter + 1
-    }));
-  }
+  incrementCounter() {}
 
-  decrementCounter() {
-    this.setState(prevState => ({
-      counter: prevState.counter - 1
-    }));
-  }
+  decrementCounter() {}
 
   render() {
     return (
       <div>
         <div>{this.state.counter}</div>
-        <button type="button" onClick={this.incrementCounter}>
-          Increment
-        </button>
-        <button type="button" onClick={this.decrementCounter}>
-          Decrement
-        </button>
+        <button type="button">Increment</button>
+        <button type="button">Decrement</button>
       </div>
     );
   }
